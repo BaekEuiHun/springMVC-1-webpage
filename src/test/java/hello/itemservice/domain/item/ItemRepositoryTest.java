@@ -14,6 +14,7 @@ class ItemRepositoryTest {
     @AfterEach
     void afterEach() {
         itemRepository.clearStore();
+        
     }
 
     @Test
