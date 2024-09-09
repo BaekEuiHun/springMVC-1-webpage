@@ -16,6 +16,7 @@ import java.util.List;
 public class BasicItemController {
     private final ItemRepository itemRepository;
 
+    
     @GetMapping
     public String items(Model model) {
         List<Item> items = itemRepository.findAll();
