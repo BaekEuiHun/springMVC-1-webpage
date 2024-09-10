@@ -36,6 +36,7 @@ public class BasicItemController {
         return "basic/addForm";
     }
 
+    //modelAttribute 가능//
     @PostMapping("/add")
     public String save(@RequestParam String itemName, @RequestParam int price, @RequestParam Integer quantity, Model model) {
         Item item = new Item();
