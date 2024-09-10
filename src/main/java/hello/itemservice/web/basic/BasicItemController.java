@@ -16,7 +16,7 @@ import java.util.List;
 public class BasicItemController {
     private final ItemRepository itemRepository;
 
-    
+
     @GetMapping
     public String items(Model model) {
         List<Item> items = itemRepository.findAll();
@@ -53,6 +53,7 @@ public class BasicItemController {
         model.addAttribute("item", item);
         return "basic/editForm";
     }
+
     @PostMapping("/{itemId}/edit")
     public String edit(@PathVariable Long itemId, @ModelAttribute Item item) {
         itemRepository.update(itemId, item);
